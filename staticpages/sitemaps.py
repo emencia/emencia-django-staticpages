@@ -53,13 +53,16 @@ class StaticPageEntryTemplate(StaticPageEntryBase):
 
 class StaticPageSitemapBase(Sitemap):
     """
-    Simple sitemap for static pages
+    Base sitemap for static pages
     """
     changefreq = "monthly"
     priority_base = 0.5
     page_entries = []
 
     def items(self):
+        return self.get_page_entries()
+    
+    def get_page_entries(self):
         return self.page_entries
     
     def location(self, obj):
@@ -70,3 +73,19 @@ class StaticPageSitemapBase(Sitemap):
     
     def lastmod(self, obj):
         return obj.get_pub_date()
+
+class StaticPageSitemapAuto(StaticPageSitemapBase):
+    """
+    Auto sitemap for static pages
+    
+    Automatically mount each given entry into an ``entry_class``
+    """
+    entry_class = StaticPageEntryTemplate
+    pages_map = []
+    
+    def get_page_entries(self):
+        page_entries = []
+        for url_pattern, template_name, url_name in self.pages_map:
+            page_entries.append( self.entry_class(url_name=url_name, template_name=template_name) )
+
+        return page_entries
