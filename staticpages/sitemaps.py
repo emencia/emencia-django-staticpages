@@ -23,8 +23,6 @@ class StaticPageEntryBase(object):
         self.url_name = kwargs.get('url_name', None) or self.url_name
         self.priority = kwargs.get('priority', None) or self.priority
         self.template_name = kwargs.get('template_name', None) or self.template_name
-        
-        # TODO: throw an error/warning if url_name is None because it's a requirement to have an url
     
     def get_pub_date(self):
         return self.pub_date
