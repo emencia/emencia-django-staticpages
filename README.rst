@@ -116,7 +116,7 @@ Also for the ``sitemap.xml`` with Django sitemaps, you will have to do something
 Static page view
 ----------------
 
-Also note that each page will use the view ``staticpages.views import StaticPageView``. This is just a inherit from ``django.views.generic.TemplateView`` that will contains a variable ``page_map``. This variable contains the used pages map. You can use it in your templates like so : ::
+Also note that each page will use the view ``staticpages.views.StaticPageView``. This is just a inherit from ``django.views.generic.TemplateView`` that will contains a variable ``page_map``. This variable contains the used pages map. You can use it in your templates like so : ::
 
     <ul>{% for url_pattern,template_name,url_name in page_map %}
         <li><a href="{% url url_name %}">{{ template_name }}</a></li>
