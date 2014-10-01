@@ -2,7 +2,10 @@
 Urls for porticus
 """
 from django.conf import settings
-from django.conf.urls.defaults import url, patterns
+try:
+    from django.conf.urls.defaults import url, patterns
+except ImportError:
+    from django.conf.urls import url, patterns
 from staticpages.views import StaticPageView
 
 make_url = lambda x,y,z: url(x, StaticPageView.as_view(template_name=y), name=z)

@@ -2,7 +2,10 @@
 URLs loaders
 """
 #from django.conf import settings
-from django.conf.urls.defaults import url
+try:
+    from django.conf.urls.defaults import url
+except ImportError:
+    from django.conf.urls import url
 from staticpages.views import StaticPageView
 
 def mount_staticpages(*args):
