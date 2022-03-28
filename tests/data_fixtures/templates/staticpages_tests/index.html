@@ -1,0 +1,27 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+{% comment %}Make a basic title using page name{% endcomment %}
+<h1>Sample {{ page_options.name }}</h1>
+
+{% comment %}Make a basic paragraph using page url name{% endcomment %}
+<p>{{ page_options.urlname }}</p>
+
+{% comment %}Use 'is_index' value as condition to list pages or not{% endcomment %}
+{% if page_options.is_index %}
+    <ul class="menu">
+    {% for item in staticpages %}
+        {% comment %}Do not list index page in the menu{% endcomment %}
+        {% if not item.is_index %}
+        <li>{{ item.name }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% comment %}Display 'extra' content if not empty{% endcomment %}
+{% if page_options.extra %}
+    <div class="extra">{{ page_options.extra }}</div>
+{% endif %}
+
+{% endblock %}
