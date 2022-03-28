@@ -1,9 +1,26 @@
-Introduction
-============
+.. _Python: https://www.python.org/
+.. _Django: https://www.djangoproject.com/
 
-This is a simple Django app to publish some pages directly from templates. 
+==========================
+Emencia Django Staticpages
+==========================
+
+A simple Django app to publish some pages directly from templates
 
 Yes, this is simply to use a ``django.views.generic.TemplateView`` but this app will help to manage many pages and with Django sitemaps support.
+
+Dependancies
+************
+
+* `Python`_>=3.7;
+* `Django`_>=2.2,<4.0;
+
+Links
+*****
+
+* Read the documentation on `Read the docs <https://emencia-django-staticpages.readthedocs.io/>`_;
+* Download its `PyPi package <https://pypi.python.org/pypi/emencia-django-staticpages>`_;
+* Clone it on its `Github repository <https://github.com/emencia/emencia-django-staticpages>`_;
 
 Install
 =======
@@ -90,7 +107,7 @@ Then in your ``urls.py`` : ::
         urlpatterns = patterns('', *loaders.mount_staticpages(*settings.BAR_STATICPAGES)) + urlpatterns
 
 Note the usage of ``settings.DEBUG``, this is an example of the usage you can do of multiple separated page maps, the *bar* pages will not be published in production environnment but the *foo* pages will be.
-    
+
 Also for the ``sitemap.xml`` with Django sitemaps, you will have to do something like this in your ``urls.py`` : ::
 
     from django.conf import settings
