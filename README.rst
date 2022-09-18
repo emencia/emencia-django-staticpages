@@ -22,7 +22,7 @@ Dependancies
 ************
 
 * `Python`_>=3.7;
-* `Django`_>=2.2,<4.0;
+* `Django`_>=2.2;
 
 Links
 *****
