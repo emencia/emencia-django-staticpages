@@ -5,7 +5,7 @@ History
 =======
 
 
-Version 0.5.1 - Unreleased
+Version 0.5.1 - 2022/09/18
 --------------------------
 
 Added official support for Django 4.0.
