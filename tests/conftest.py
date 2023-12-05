@@ -25,6 +25,7 @@ class FixturesSettingsTestMixin(object):
         self.application_path = Path(
             staticpages.__file__
         ).parents[0].resolve()
+        self.application_urlpath = ""
 
         self.package_path = self.application_path.parent
 

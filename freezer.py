@@ -110,12 +110,8 @@ def write_frozen_requirements(package_name, filename="frozen.txt"):
     requirements = extract_pkg_requirements(package_name)
     installed = get_install_dependencies(requirements)
 
-    msg = (
-        "# Frozen requirement versions from '{}' development installation"
-    )
-
     lines = [
-        msg.format(version)
+        "# Frozen requirement versions from '{}' installation".format(version)
     ] + installed
 
     with open(filename, "w") as fp:

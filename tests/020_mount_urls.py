@@ -1,6 +1,6 @@
 import pytest
 
-from tests.utils import html_pyquery
+from staticpages.utils.tests import html_pyquery
 
 
 @pytest.mark.urls("sandbox.staticpages_testapp.base_urls")

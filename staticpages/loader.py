@@ -1,9 +1,4 @@
 """
-.. _loader_docstring_args:
-
-Loader
-======
-
 Loader is in charge to resolve page item options and to create UrlPattern objects from
 a given page registry.
 

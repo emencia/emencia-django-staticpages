@@ -10,7 +10,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    #path("", include("staticpages.urls")),
 ]
 
 # This is only needed when using runserver with settings "DEBUG" enabled

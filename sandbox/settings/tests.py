@@ -1,32 +1,23 @@
 """
 Django settings for tests
 """
-
-from sandbox.settings.base import *
-
-TESTS_PATH = join(BASE_DIR, "tests")
-
+from sandbox.settings.base import *  # noqa: F403
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": ":memory:",
-        "TEST": {
-            "NAME": join(VAR_PATH, "db", "tests.sqlite3"),  # noqa
-        }
     }
 }
 
-
-TEMPLATES[0]["DIRS"].extend([
-    join(TESTS_PATH, "data_fixtures", "templates", "staticpages_tests"),
-])
-
-
 # Media directory dedicated to tests to avoid polluting other environment
 # media directory
-MEDIA_ROOT = join(VAR_PATH, "media-tests")
+MEDIA_ROOT = VAR_PATH / "media-tests"  # noqa: F405
 
+# Add specific test templates
+TEMPLATES[0]["DIRS"].extend([
+    BASE_DIR / "tests" / "data_fixtures" / "templates" / "staticpages_tests",
+])
 
 # Neutralize default settings
 STATICPAGES = []

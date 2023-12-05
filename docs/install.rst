@@ -25,13 +25,4 @@ Then load default application settings in your settings file: ::
 
     from staticpages.settings import *
 
-See in :ref:`usage_intro` to learn how to define pages and mount their urls.
-
-
-.. _intro_settings:
-
-Settings
-********
-
-.. automodule:: staticpages.settings
-   :members:
+See :ref:`usage_intro` to learn how to define pages and mount their urls.

@@ -1,0 +1,16 @@
+{
+  "status": "done",
+  "assets": {
+    "main.js": {
+      "name": "main.js",
+      "path": "/home/emencia/Projects/Apps/emencia-django-staticpages/sandbox/static-sources/js/main.js",
+      "publicPath": "/static/js/main.js"
+    }
+  },
+  "chunks": {
+    "main": [
+      "main.js"
+    ]
+  },
+  "publicPath": "/static/js/"
+}

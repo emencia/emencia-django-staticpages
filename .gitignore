@@ -13,6 +13,7 @@ __pycache__/
 # Site media and builded statics
 /var/
 /sandbox/static
+frontend/package-lock.json
 
 # Settings
 localsettings.py

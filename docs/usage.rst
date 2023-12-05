@@ -31,9 +31,9 @@ So you got page templates in directory ``templates/staticpages/`` : ::
 In your settings, you will just have to list their template names: ::
 
     STATICPAGES = [
-        "index",
-        "foo",
         "bar",
+        "foo",
+        "index",
     ]
 
 And finally mount them in your root ``urls.py`` like so: ::
@@ -68,18 +68,31 @@ Options format
 Here is a sample of all possible options for a page: ::
 
     {
+        "extra": "anything anykind",
+        "name": "foo",
         "path": "foo/",
         "re_path": r"foo/$",
         "template": "foo",
         "template_path": "foo.html",
-        "name": "foo",
-        "extra": "anything anykind",
     }
 
 .. _usage_options_specs:
 
 Specifications
 ..............
+
+``extra``
+    Extra data to pass to view in its options.
+
+``name``
+    Optional page url name used to mount url, it can be used to reverse it to
+    page url with Django function ``django.urls.reverse``.
+
+    This option becomes required if ``template_path`` option has been given.
+
+    It must be a valid url name so no space or any special characters, only letters,
+    numbers, ``-`` and ``_``. If you need to pass a display name to use in template,
+    use the ``extra`` option to do so.
 
 ``path``
     Optional page url path that will be used to mount page on urls. So if
@@ -114,19 +127,6 @@ Specifications
     Using this option is a way to explicitely define a full template path
     instead of ``template`` option magic.
 
-``name``
-    Optional page url name used to mount url, it can be used to reverse it to
-    page url with Django function ``django.urls.reverse``.
-
-    This option becomes required if ``template_path`` option has been given.
-
-    It must be a valid url name so no space or any special characters, only letters,
-    numbers, ``-`` and ``_``. If you need to pass a display name to use in template,
-    use the ``extra`` option to do so.
-
-``extra``
-    Extra data to pass to view in its options.
-
 
 Defining page with options
 --------------------------
@@ -135,8 +135,8 @@ So you got page templates in directory ``templates/staticpages/`` : ::
 
     templates/
     └── staticpages
-        ├── page.html
         ├── index.html
+        ├── page.html
         └── ping
             └── pong.html
 
@@ -191,7 +191,7 @@ If you need to load different static pages from different applications, you won'
 able to manage them all from the settings.
 
 To resolve this situation, Loader accept some arguments to override settings, see
-:ref:`loader_docstring_args` documentation for details. Obviously you will need to use
+:ref:`references_loader_intro` documentation for details. Obviously you will need to use
 different loader instance for each application to be able to provided different
 arguments.
 
@@ -248,28 +248,28 @@ Template context variables
 
 The variable ``page_options`` will contains the following items.
 
-``name``
+name
     The page name which is ever the template name or the url name depending provided
     options.
 
-``urlname``
+urlname
     The url name with possible prefix depending settings and loader arguments.
 
-``template``
+template
     The full template path.
 
-``path``
+path
     The url path or url regex path depending provided options.
 
-``is_regex``
+is_regex
     A boolean to indicate if ``path`` is a regex path (True) or not (False)
 
-``is_index``
+is_index
     A boolean to mark a page as an index page. At this stage it only have an
     informational meaning which can be used in a template to distinguish a page from
     non index ones.
 
-``extra``
+extra
     Some extra data you may want to pass to template. You can put anything you need in
     this variable.
 

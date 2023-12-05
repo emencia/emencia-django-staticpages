@@ -1,4 +1,8 @@
-.. _django-app_loader_intro:
+.. _references_loader_intro:
+
+======
+Loader
+======
 
 .. automodule:: staticpages.loader
     :members: StaticpagesLoader
