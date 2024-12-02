@@ -3,8 +3,8 @@
 Changelog
 =========
 
-Development
------------
+Version 0.6.1 - 2024/12/01
+--------------------------
 
 Minor release without any incompatible changes, you should be able to safely migrate.
 
