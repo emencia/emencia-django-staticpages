@@ -23,7 +23,7 @@ Links
 
 * Read the documentation on `Read the docs <https://emencia-django-staticpages.readthedocs.io/>`_;
 * Download its `PyPi package <https://pypi.python.org/pypi/emencia-django-staticpages>`_;
-* Clone it on its `Github repository <https://github.com/sveetch/emencia-django-staticpages>`_;
+* Clone it on its `Github repository <https://github.com/emencia/emencia-django-staticpages>`_;
 
 
 Credits

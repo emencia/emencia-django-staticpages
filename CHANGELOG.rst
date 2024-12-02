@@ -3,6 +3,16 @@
 Changelog
 =========
 
+Development
+-----------
+
+Minor release without any incompatible changes, you should be able to safely migrate.
+
+* Added support for **Django 5.0** and **Django 5.1**;
+* Added minimal version for all requirements;
+* Updated script to freeze local dependencies;
+
+
 Version 0.6.0 - 2023/12/06
 --------------------------
 
