@@ -3,6 +3,13 @@
 Changelog
 =========
 
+Version 0.6.2 - 2025/05/16
+--------------------------
+
+Minor release without any incompatible changes, you should be able to safely migrate.
+
+* Added support for **Django 5.2**.
+
 Version 0.6.1 - 2024/12/01
 --------------------------
 
