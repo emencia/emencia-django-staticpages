@@ -3,15 +3,24 @@
 Changelog
 =========
 
+Development
+***********
+
+* Added support for **Django 6.0**;
+* Added support for **Python 3.12** and **Python 3.13**;
+* Updated package setup;
+* Updated again script to freeze local dependencies;
+
+
 Version 0.6.2 - 2025/05/16
---------------------------
+**************************
 
 Minor release without any incompatible changes, you should be able to safely migrate.
 
 * Added support for **Django 5.2**.
 
 Version 0.6.1 - 2024/12/01
---------------------------
+**************************
 
 Minor release without any incompatible changes, you should be able to safely migrate.
 
@@ -21,7 +30,7 @@ Minor release without any incompatible changes, you should be able to safely mig
 
 
 Version 0.6.0 - 2023/12/06
---------------------------
+**************************
 
 You should be able to safely migrate to this version without any changes if you are
 fullfilling requirements.
@@ -36,13 +45,13 @@ fullfilling requirements.
 
 
 Version 0.5.1 - 2022/09/18
---------------------------
+**************************
 
 Added official support for Django 4.0.
 
 
 Version 0.5.0 - 2022/04/04
---------------------------
+**************************
 
 **Complete refactoring**
 
@@ -60,7 +69,7 @@ The 0.5.x branch will be the last to support Python3.7.
 
 
 Version 0.4.0 - 2014/10/01
---------------------------
+**************************
 
 **Last version with Python3.6 and Django<2.2 version**
 

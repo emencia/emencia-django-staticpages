@@ -6,6 +6,7 @@ SANDBOX_DIR=sandbox
 STATICFILES_DIR=$(SANDBOX_DIR)/static-sources
 
 PYTHON_BIN=$(VENV_PATH)/bin/python
+
 PIP_BIN=$(VENV_PATH)/bin/pip
 FLAKE_BIN=$(VENV_PATH)/bin/flake8
 PYTEST_BIN=$(VENV_PATH)/bin/pytest
@@ -13,7 +14,7 @@ SPHINX_RELOAD_BIN=$(PYTHON_BIN) docs/sphinx_reload.py
 TOX_BIN=$(VENV_PATH)/bin/tox
 TWINE_BIN=$(VENV_PATH)/bin/twine
 
-DJANGO_MANAGE=$(SANDBOX_DIR)/manage.py
+DJANGO_MANAGE=manage.py
 
 PACKAGE_NAME=emencia-django-staticpages
 PACKAGE_SLUG=emencia_django_staticpages
