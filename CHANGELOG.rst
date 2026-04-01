@@ -10,6 +10,7 @@ Development
 * Added support for **Python 3.12** and **Python 3.13**;
 * Updated package setup;
 * Updated again script to freeze local dependencies;
+* Updated sandbox frontend;
 
 
 Version 0.6.2 - 2025/05/16
