@@ -8,6 +8,8 @@ Development
 
 * Added support for **Django 6.0**;
 * Added support for **Python 3.12** and **Python 3.13**;
+* Restored Python 3.9 support for now to ease project upgrades (it will be probably
+  dropped on next release);
 * Updated package setup;
 * Updated again script to freeze local dependencies;
 * Updated sandbox frontend;
