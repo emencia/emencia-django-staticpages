@@ -3,8 +3,8 @@
 Changelog
 =========
 
-Development
-***********
+Version 0.7.0 - 2025/04/01
+**************************
 
 * Added support for **Django 6.0**;
 * Added support for **Python 3.12** and **Python 3.13**;

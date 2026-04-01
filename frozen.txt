@@ -1,4 +1,4 @@
-# Frozen requirement versions for 'emencia-django-staticpages==0.7.0rc1' installation
+# Frozen requirement versions for 'emencia-django-staticpages==0.7.0' installation
 Django==5.2.12
 # From extra requirements 'dev'
 pytest==9.0.2
